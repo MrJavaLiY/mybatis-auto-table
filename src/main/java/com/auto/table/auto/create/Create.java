@@ -15,6 +15,7 @@ import com.baomidou.mybatisplus.mapper.Wrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -27,7 +28,7 @@ import java.util.stream.Collectors;
  * @author ly
  * @date 2019/11/26 0026 14:06
  */
-@Service
+@Component
 @Slf4j
 /*
  CREATE TABLE Employees (
@@ -108,7 +109,7 @@ public class Create {
                 fieldName = field.getName();
             }
             if (tableColumns.stream().anyMatch(c -> fieldName.equals(c.getColumnName()))) {
-                //证明已经有数据了，所以不要了
+                //证明已经有数据了，所以不要了 11
                 continue;
             }
             String fieldType = getEnum(field.getType().getSimpleName());
