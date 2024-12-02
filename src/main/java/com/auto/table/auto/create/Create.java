@@ -66,6 +66,18 @@ public class Create {
         if (sql.isEmpty()) {
             return;
         }
+
+
+
+
+
+
+
+
+
+
+
+
         log.debug("需要执行的语句是：{}", sql);
         System.out.println(sql);
         jdbcTemplate.execute(sql);
